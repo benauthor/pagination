@@ -30,12 +30,11 @@ def wordpaginate(text, page, chars_per_page):
         total = 0
         result = ''
         chunks = text.split()
-        chunks.reverse()
         while chunks:
             total += 1
             a_page = ''
             while len(a_page) < chars_per_page:
-                a_page += chunks.pop()
+                a_page += chunks.pop(0)
             if total == page:
                 result = a_page
 

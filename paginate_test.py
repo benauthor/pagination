@@ -35,3 +35,6 @@ class TestWordPagination:
     @raises(paginate.OutOfRange)
     def test_out_of_range_raises(self):
         pages, contents = paginate.wordpaginate('Avast ye landlubbers!', 2, 1000)
+
+if __name__ == "__main__":
+    nose.main()
